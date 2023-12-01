@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+城市:{{ city }}
+<br>
+用户名：{{ username }}
+<br>
+工资：{{ money.2020 }}
+<br>
+朋友:{{ friends.0 }}
+{% for friend in  friends %}
+    {{  forloop.counter0}}:{{ friend }}
+{% endfor %}
+<br>
+{% if age > 18 %}
+    成年了 可以谈恋爱了
+    {% else %}
+    太小了 好好读书
+{% endif %}
+我的生日:{{ birthday|date:'Y年 m月 d日' }}
+<br>
+我的简介:{{ desc|safe }}
+<br>
+我没有定义变量:{{ abc|default:'Ni' }}
+
+</body>
+</html>

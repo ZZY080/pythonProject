@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a>{{ username }}</a>
+<br>
+{{ friends | length}}
+<br>
+{{ friends.2 }}
+<br>
+{% for friend in friends %}
+    {{ loop.index }}:{{ friend }}
+{% endfor %}
+<br>
+{{ date(birthday,'Y年 m月 d 日') }}
+
+</body>
+</html>
