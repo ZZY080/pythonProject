@@ -9,6 +9,7 @@ mycol = mydb["info"]
 # 查询所有文档的 id 字段
 mongo_all_id = mycol.find({}, {"_id": 0,"id": 1})
 mongo_list_id = [doc["id"] for doc in mongo_all_id]
+print(len(mongo_list_id))
 # 读取 Excel 文件 从200行开始
 df = pd.read_excel('./全景1.xls',header=None)
 part_id_list = df.iloc[:, 0].tolist()[:181]  # 选择第一列并转换为列表
@@ -25,6 +26,7 @@ all_id_list = df.iloc[:, 0].tolist()[1301:]  # 获取第一列数据并转换为
 
 
 id_list= [item for item in all_id_list if item not in part_id_list ]
+print(id_list)
 
 
 

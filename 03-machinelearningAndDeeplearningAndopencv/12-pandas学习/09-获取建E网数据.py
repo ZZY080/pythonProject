@@ -27,7 +27,7 @@ part_id_list=list(set(part_id_list))
 
 
 # # 读取 CSV 文件并取消索引
-df = pd.read_csv('all.csv', index_col=False,header=None)
+df = pd.read_csv('../23-pytorch/all.csv', index_col=False, header=None)
 
 # 获取第一列数据并转换为列表 从第1500行开始
 all_id_list = df.iloc[:, 0].tolist()[1301:]  # 获取第一列数据并转换为列表
